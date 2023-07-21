@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+public static void main (String[] args)
+{
+Scanner sc=new Scanner(System.in);
+int nums_size=sc.nextInt();
+int nums[] = new int[nums_size];
+int i;
+int left = 0, right = nums_size - 1;
+for(i=0;i<nums_size;i++)
+nums[i]=sc.nextInt();
+while (left < right)
+{
+/* While 0 at left increment left index */
+while (nums[left] == 0 && left < right)
+left++;
+/* While we see 1 at right decrement right index*/
+while (nums[right] == 1 && left < right)
+right--;
+
+if (left < right)
+{
+nums[left] = 0;
+nums[right] = 1;
+left++;
+right--;
+
+Array after segregation is : [0, 0, 0, 0, 0, 1, 1
+
+Array after segregation is : [0, 0, 0, 1, 1, 1, 1
+
+g ;
+
+}
+}
+System.out.println("Array after segregation is : "+Arrays.toString(nums));
+}
+}
